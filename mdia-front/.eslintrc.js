@@ -14,7 +14,8 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     "indent": "off",
-    'eol-last': ["error", "never"]
+    "eol-last": 0,
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
   },
   overrides: [
     {
