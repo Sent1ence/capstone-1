@@ -4,7 +4,7 @@
   box-sizing: inherit;
 }
 html {
-  font-size: 62.5%; //Defines default font size based on px 1rem = 10px; default rem is 16p
+  font-size: 16px; //Defines default font size based on px 1rem = 10px; default rem is 16p
 }
 
 body {
@@ -15,6 +15,6 @@ ul {
   list-style: none;
 }
 
-h1 {
-  color: blue;
+.v-toolbar {
+  flex: 0;
 }

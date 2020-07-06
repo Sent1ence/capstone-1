@@ -1,22 +1,17 @@
 <template>
-  <v-app>
-    <div class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/About">About</router-link>
-    </div>
+  <v-app id="app" class="grey ligten-4">
+    <TopNav />
     <v-content>
       <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
-
-
 <script>
+import TopNav from "./components/TopNav";
 export default {
-  name: "App",
-  data: () => ({
-    //
-  })
+  components: {
+    TopNav
+  }
 };
 </script>
