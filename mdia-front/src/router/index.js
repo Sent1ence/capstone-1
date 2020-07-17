@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Test from '../views/Test.vue'
+import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
+import Board from '../views/Board.vue'
+import Equipment from '../views/Equipment.vue'
 
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
@@ -13,14 +14,24 @@ const routes = [
     component: Home
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: Test
+    path: '/Profile-page',
+    name: 'Profile',
+    component: Profile
   },
   {
     path: '/About',
     name: 'About',
     component: About
+  },
+  {
+    path: '/Board-members',
+    name: 'Board',
+    component: Board
+  },
+  {
+    path: '/Equipment',
+    name: 'Equipment',
+    component: Equipment
   }
 ]
 

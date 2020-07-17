@@ -1,7 +1,7 @@
 <template>
-  <v-app id="app" class="grey ligten-4">
+  <v-app id="app">
     <TopNav />
-    <v-content>
+    <v-content class="grey lighten-4">
       <router-view></router-view>
     </v-content>
   </v-app>
