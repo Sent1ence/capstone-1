@@ -92,19 +92,3 @@ export default {
   }
 };
 </script>
-<style>
-.item.In-use {
-  border-left: 5px solid orange;
-}
-
-.item.Available {
-  border-left: 5px solid #3cd1c2;
-}
-.v-chip.In-use {
-  background: #fed330;
-}
-
-.v-chip.Available {
-  background: #3cd1c2;
-}
-</style>

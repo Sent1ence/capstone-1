@@ -2,7 +2,7 @@
   <div class="board mx-4 mb-4">
     <v-container class="my-5">
       <v-row>
-        <v-col cols="12" sm="6" md="4" lg="3" v-for="person in board" :key="person.BoardID">
+        <v-col cols="12" sm="6" md="4" lg="3" v-for="person in boardOfTrustee" :key="person.BoardID">
           <v-card class="ma-3">
             <div align="center">
               <v-responsive class="pt-4">
@@ -29,43 +29,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: "Home",
   data() {
-    return {
-      board: [
-        {
-          BoardID: 1,
-          Name: "Tim Duncan",
-          Position: "President",
-          avatar: "/avatar/1.jpg"
-        },
-        {
-          BoardID: 2,
-          Name: "Duncan Robinson",
-          Position: "Vice-President",
-          avatar: "/avatar/2.jpg"
-        },
-        {
-          BoardID: 3,
-          Name: "Tony Parker",
-          Position: "Secretary",
-          avatar: "/avatar/3.jpg"
-        },
-        {
-          BoardID: 4,
-          Name: "Manu Ginobili",
-          Position: "Treasurer",
-          avatar: "/avatar/4.jpg"
-        },
-        {
-          BoardID: 5,
-          Name: "Gregg Popovich",
-          Position: "P.I.O",
-          avatar: "/avatar/5.jpg"
-        }
-      ]
-    };
+    return {};
+  },
+  computed: {
+    ...mapState(['boardOfTrustee'])
   }
 };
 </script>

@@ -17,10 +17,6 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <!-- Sign Out Icon -->
-      <v-btn text color="black">
-        <v-icon>mdi-export</v-icon>
-      </v-btn>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" class="secondary text-uppercase" app>
       <template v-slot:prepend>

@@ -1,0 +1,14 @@
+.item.In-use {
+    border-left: 5px solid  $color-orange;
+  }
+  
+  .item.Available {
+    border-left: 5px solid #3cd1c2;
+  }
+  .v-chip.In-use {
+    background: $color-orange;
+  }
+  
+  .v-chip.Available {
+    background: #3cd1c2;
+  }
