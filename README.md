@@ -2,4 +2,4 @@
 Development of Musuan-Dologon Irrigation Association web app
 
 # <h1> Project Mockup
-![alt text](https://github.com/[Sent1ence]/[capstone-1]/blob/[master]/loginPage.png?raw=true)
+![loginPage](https://user-images.githubusercontent.com/50163751/88453286-20458800-ce98-11ea-896b-9b56bad8eaf0.png)
