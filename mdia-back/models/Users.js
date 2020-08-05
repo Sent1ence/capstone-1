@@ -2,7 +2,7 @@ const { Model } = require('objection');
 
 class User extends Model {
   static get tableName() {
-    return 'tbl_user';
+    return 'tbl_users';
   }
 
   // For input validation. This is not for database schema

@@ -3,15 +3,26 @@ const router = express.Router();
 const User = require('../../models/Users.js');
 const bcrypt = require('bcryptjs');
 const dotenv = require('dotenv');
-const verify = require('../auth');
+const verify = require('./auth');
 path = require('path');
 
 dotenv.config({ path: path.join(__dirname, '../../.env') });
 
-router.get('/', verify, async (req, res) => {
+router.get('/', async (req, res) => {
   const users = await User.query();
   res.json(users);
 });
+
+router.route('/:id')
+  .get(async (req, res) => {
+    const userId = req.params.id
+    const users = await User.query().where('user_id', userId);
+    res.send(users);
+  })
+  .post((req, res) => {
+    res.send('Hello world');
+  });
+
 
 router.post('/register', verify, async (req, res) => {
   // Check if email and username is taken
