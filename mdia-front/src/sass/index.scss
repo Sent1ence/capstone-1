@@ -1,3 +1,9 @@
 @import './abstract/variable';
 @import './base/base';
 @import './page/equipment';
+@import './page/navbar';
+@import './page/upsert-equipment';
+@import './page/home';
+// Widget
+@import './components/areaChart';
+@import './components/widget';

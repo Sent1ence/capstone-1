@@ -19,8 +19,21 @@ router.route('/:id')
     const users = await User.query().where('user_id', userId);
     res.send(users);
   })
-  .post((req, res) => {
-    res.send('Hello world');
+  .post(async (req, res) => {
+    try {
+      const newUser = await User.query().insert({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        username: req.body.username,
+        password: req.body.password,
+        address: req.body.address,
+        email: req.body.email,
+        balance: req.body.balance
+      });
+      res.json(newUser);
+    } catch (err) {
+      res.status(400).json(err);
+    }
   });
 
 

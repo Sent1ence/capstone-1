@@ -1,17 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
-
-body {
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
-}
-
+  
 .v-toolbar {
   flex: 0;
+}
+
+body h1{
+  color: $color-lightdark
 }

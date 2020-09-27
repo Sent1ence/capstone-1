@@ -8,7 +8,7 @@ exports.up = function (knex) {
             table.string('user_username').notNull();
             table.string('user_password').notNull();
             table.string('user_address').notNull();
-            table.string('user_email');
+            table.string('user_email').notNull();
             table.timestamp('user_ccreated_at').defaultTo(knex.fn.now())
             table.decimal('user_balance', 10, 2)
             table.boolean('user_is_admin').defaultTo(false);

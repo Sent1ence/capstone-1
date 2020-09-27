@@ -2,7 +2,14 @@
   <div class="board mx-4 mb-4">
     <v-container class="my-5">
       <v-row>
-        <v-col cols="12" sm="6" md="4" lg="3" v-for="person in boardOfTrustee" :key="person.BoardID">
+        <v-col
+          cols="12"
+          sm="6"
+          md="4"
+          lg="3"
+          v-for="person in boardOfTrustee"
+          :key="person.BoardID"
+        >
           <v-card class="ma-3">
             <div align="center">
               <v-responsive class="pt-4">
@@ -29,14 +36,20 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from "vuex";
 export default {
-  name: "Home",
+  name: "Inventory",
   data() {
     return {};
   },
   computed: {
-    ...mapState(['boardOfTrustee'])
-  }
+    ...mapState(["equipments"]),
+  },
+  methods: {
+    ...mapActions(["getEquipment"]),
+  },
+  mounted() {
+    this.getEquipment();
+  },
 };
 </script>

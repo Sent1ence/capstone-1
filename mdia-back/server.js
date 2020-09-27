@@ -1,7 +1,8 @@
 // This file only purpose is to include the route handler
 // Route class
 const express = require('express');
-//const bodyParser = require('body-parser');
+const cors = require('cors');
+const helmet = require('helmet')
 const app = express();
 
 //Connect to database
@@ -15,11 +16,11 @@ Model.knex(knex);
 const apiRoutes = require('./routes/api');
 
 //Use middleware
+app.use(helmet());
+app.use(cors());
 app.use(express.json());
-/* app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); */
 // Include the routes to middleware
-app.use('/api', apiRoutes);
+app.use('/api/v1', apiRoutes);
 
 //Declare port to run the server
 const PORT = process.env.PORT || 3000;

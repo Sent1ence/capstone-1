@@ -5,6 +5,7 @@ import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
 import Board from '../views/Board.vue'
 import Equipment from '../views/Equipment.vue'
+import AddEquipment from '../views/CreateEquipment.vue'
 import SignIn from '../views/SignIn.vue'
 
 Vue.use(VueRouter)
@@ -34,6 +35,11 @@ const routes = [
     name: 'Equipment',
     component: Equipment
   },
+  {
+    path: '/Equipment/Create',
+    name: 'AddEquipment', 
+    component: AddEquipment
+  },  
   {
     path: '/SignIn',
     name: 'SignIn',
