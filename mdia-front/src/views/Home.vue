@@ -2,6 +2,9 @@
   <div class="home mx-4 mb-4">
     <h1 class="subtitle-1 grey--text">Homepage</h1>
     <v-container class="my-4" fluid>
+      <!-- Portal -->
+        <Portal />
+      <!-- End of Portal -->
       <v-row no-gutters>
         <v-col cols="12">
           <!-- Wideget card -->
@@ -88,9 +91,10 @@ import { mapState, mapActions } from "vuex";
 import WaterChart from "../components/charts/WaterChart";
 import HarvestChart from "../components/charts/HarvestChart";
 import Widget from "../components/Widget";
+import Portal from '../components/Portal'
 export default {
   name: "Home",
-  components: { Widget, WaterChart, HarvestChart },
+  components: { Widget, WaterChart, HarvestChart, Portal },
   data() {
     return {
       waterChartData: [],
