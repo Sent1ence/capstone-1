@@ -1,9 +1,11 @@
 // This file only purpose is to include the route handler
 // Route class
+require('module-alias/register')
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet')
 const app = express();
+
 
 //Connect to database
 const Knex = require('knex');
@@ -21,6 +23,13 @@ app.use(cors());
 app.use(express.json());
 // Include the routes to middleware
 app.use('/api/v1', apiRoutes);
+
+
+//Error handler must be the last one among other routes or middleware to function properly
+const { errorHandler } = require("./helpers/error.js");
+app.use((err, req, res, next) => {
+  errorHandler(err, res);
+})
 
 //Declare port to run the server
 const PORT = process.env.PORT || 3000;
